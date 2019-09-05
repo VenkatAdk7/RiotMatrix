@@ -814,7 +814,7 @@ internal enum VectorL10n {
   internal static var deviceVerificationVerifyWaitPartner: String { 
     return VectorL10n.tr("Vector", "device_verification_verify_wait_partner") 
   }
-  /// %tu rooms
+  /// %tu groups
   internal static func directoryCellDescription(_ p1: Int) -> String {
     return VectorL10n.tr("Vector", "directory_cell_description", p1)
   }
@@ -842,7 +842,7 @@ internal enum VectorL10n {
   internal static var directorySearchingTitle: String { 
     return VectorL10n.tr("Vector", "directory_searching_title") 
   }
-  /// All native Matrix rooms
+  /// All native Matrix groups
   internal static var directoryServerAllNativeRooms: String { 
     return VectorL10n.tr("Vector", "directory_server_all_native_rooms") 
   }
@@ -858,7 +858,7 @@ internal enum VectorL10n {
   internal static var directoryServerPlaceholder: String { 
     return VectorL10n.tr("Vector", "directory_server_placeholder") 
   }
-  /// Type a homeserver to list public rooms from
+  /// Type a homeserver to list public groups from
   internal static var directoryServerTypeHomeserver: String { 
     return VectorL10n.tr("Vector", "directory_server_type_homeserver") 
   }
@@ -1022,7 +1022,7 @@ internal enum VectorL10n {
   internal static var groupDetailsPeople: String { 
     return VectorL10n.tr("Vector", "group_details_people") 
   }
-  /// Rooms
+  /// Groups
   internal static var groupDetailsRooms: String { 
     return VectorL10n.tr("Vector", "group_details_rooms") 
   }
@@ -1034,7 +1034,7 @@ internal enum VectorL10n {
   internal static func groupHomeMultiMembersFormat(_ p1: Int) -> String {
     return VectorL10n.tr("Vector", "group_home_multi_members_format", p1)
   }
-  /// %tu rooms
+  /// %tu groups
   internal static func groupHomeMultiRoomsFormat(_ p1: Int) -> String {
     return VectorL10n.tr("Vector", "group_home_multi_rooms_format", p1)
   }
@@ -1102,7 +1102,7 @@ internal enum VectorL10n {
   internal static var groupParticipantsRemovePromptTitle: String { 
     return VectorL10n.tr("Vector", "group_participants_remove_prompt_title") 
   }
-  /// Filter community rooms
+  /// Filter community groups
   internal static var groupRoomsFilterRooms: String { 
     return VectorL10n.tr("Vector", "group_rooms_filter_rooms") 
   }
@@ -1418,7 +1418,7 @@ internal enum VectorL10n {
   internal static var preview: String { 
     return VectorL10n.tr("Vector", "preview") 
   }
-  /// Public Rooms (at %@):
+  /// Public Groups (at %@):
   internal static func publicRoomSectionTitle(_ p1: String) -> String {
     return VectorL10n.tr("Vector", "public_room_section_title", p1)
   }
@@ -1550,15 +1550,15 @@ internal enum VectorL10n {
   internal static var roomDetailsAccessSection: String { 
     return VectorL10n.tr("Vector", "room_details_access_section") 
   }
-  /// Anyone who knows the room's link, including guests
+  /// Anyone who knows the group's link, including guests
   internal static var roomDetailsAccessSectionAnyone: String { 
     return VectorL10n.tr("Vector", "room_details_access_section_anyone") 
   }
-  /// Anyone who knows the room's link, apart from guests
+  /// Anyone who knows the group's link, apart from guests
   internal static var roomDetailsAccessSectionAnyoneApartFromGuest: String { 
     return VectorL10n.tr("Vector", "room_details_access_section_anyone_apart_from_guest") 
   }
-  /// List this room in room directory
+  /// List this group in room directory
   internal static var roomDetailsAccessSectionDirectoryToggle: String { 
     return VectorL10n.tr("Vector", "room_details_access_section_directory_toggle") 
   }
@@ -1634,15 +1634,15 @@ internal enum VectorL10n {
   internal static var roomDetailsDirectChat: String { 
     return VectorL10n.tr("Vector", "room_details_direct_chat") 
   }
-  /// Fail to add the new room addresses
+  /// Fail to add the new group addresses
   internal static var roomDetailsFailToAddRoomAliases: String { 
     return VectorL10n.tr("Vector", "room_details_fail_to_add_room_aliases") 
   }
-  /// Fail to enable encryption in this room
+  /// Fail to enable encryption in this group
   internal static var roomDetailsFailToEnableEncryption: String { 
     return VectorL10n.tr("Vector", "room_details_fail_to_enable_encryption") 
   }
-  /// Fail to remove the room addresses
+  /// Fail to remove the group addresses
   internal static var roomDetailsFailToRemoveRoomAliases: String { 
     return VectorL10n.tr("Vector", "room_details_fail_to_remove_room_aliases") 
   }
@@ -1662,7 +1662,7 @@ internal enum VectorL10n {
   internal static var roomDetailsFailToUpdateRoomCommunities: String { 
     return VectorL10n.tr("Vector", "room_details_fail_to_update_room_communities") 
   }
-  /// Fail to update the direct flag of this room
+  /// Fail to update the direct flag of this group
   internal static var roomDetailsFailToUpdateRoomDirect: String { 
     return VectorL10n.tr("Vector", "room_details_fail_to_update_room_direct") 
   }
@@ -1670,7 +1670,7 @@ internal enum VectorL10n {
   internal static var roomDetailsFailToUpdateRoomDirectoryVisibility: String { 
     return VectorL10n.tr("Vector", "room_details_fail_to_update_room_directory_visibility") 
   }
-  /// Fail to update the room guest access
+  /// Fail to update the group guest access
   internal static var roomDetailsFailToUpdateRoomGuestAccess: String { 
     return VectorL10n.tr("Vector", "room_details_fail_to_update_room_guest_access") 
   }
@@ -1754,7 +1754,7 @@ internal enum VectorL10n {
   internal static func roomDetailsNewFlairPlaceholder(_ p1: String) -> String {
     return VectorL10n.tr("Vector", "room_details_new_flair_placeholder", p1)
   }
-  /// This room has no local addresses
+  /// This group has no local addresses
   internal static var roomDetailsNoLocalAddresses: String { 
     return VectorL10n.tr("Vector", "room_details_no_local_addresses") 
   }
@@ -1762,11 +1762,11 @@ internal enum VectorL10n {
   internal static var roomDetailsPeople: String { 
     return VectorL10n.tr("Vector", "room_details_people") 
   }
-  /// Room Photo
+  /// Group Photo
   internal static var roomDetailsPhoto: String { 
     return VectorL10n.tr("Vector", "room_details_photo") 
   }
-  /// Room Name
+  /// Group Name
   internal static var roomDetailsRoomName: String { 
     return VectorL10n.tr("Vector", "room_details_room_name") 
   }
@@ -1782,7 +1782,7 @@ internal enum VectorL10n {
   internal static var roomDetailsSettings: String { 
     return VectorL10n.tr("Vector", "room_details_settings") 
   }
-  /// Room Details
+  /// Group Details
   internal static var roomDetailsTitle: String { 
     return VectorL10n.tr("Vector", "room_details_title") 
   }
@@ -1794,7 +1794,7 @@ internal enum VectorL10n {
   internal static var roomDetailsUnsetMainAddress: String { 
     return VectorL10n.tr("Vector", "room_details_unset_main_address") 
   }
-  /// No public rooms available
+  /// No public group available
   internal static var roomDirectoryNoPublicRoom: String { 
     return VectorL10n.tr("Vector", "room_directory_no_public_room") 
   }
@@ -1966,7 +1966,7 @@ internal enum VectorL10n {
   internal static func roomOngoingConferenceCallWithClose(_ p1: String, _ p2: String, _ p3: String) -> String {
     return VectorL10n.tr("Vector", "room_ongoing_conference_call_with_close", p1, p2, p3)
   }
-  /// Ban from this room
+  /// Ban from this group
   internal static var roomParticipantsActionBan: String { 
     return VectorL10n.tr("Vector", "room_participants_action_ban") 
   }
@@ -1978,7 +1978,7 @@ internal enum VectorL10n {
   internal static var roomParticipantsActionInvite: String { 
     return VectorL10n.tr("Vector", "room_participants_action_invite") 
   }
-  /// Leave this room
+  /// Leave this group
   internal static var roomParticipantsActionLeave: String { 
     return VectorL10n.tr("Vector", "room_participants_action_leave") 
   }
@@ -1986,7 +1986,7 @@ internal enum VectorL10n {
   internal static var roomParticipantsActionMention: String { 
     return VectorL10n.tr("Vector", "room_participants_action_mention") 
   }
-  /// Remove from this room
+  /// Remove from this group
   internal static var roomParticipantsActionRemove: String { 
     return VectorL10n.tr("Vector", "room_participants_action_remove") 
   }
@@ -2078,11 +2078,11 @@ internal enum VectorL10n {
   internal static var roomParticipantsInvitedSection: String { 
     return VectorL10n.tr("Vector", "room_participants_invited_section") 
   }
-  /// Are you sure you want to leave the room?
+  /// Are you sure you want to leave the group?
   internal static var roomParticipantsLeavePromptMsg: String { 
     return VectorL10n.tr("Vector", "room_participants_leave_prompt_msg") 
   }
-  /// Leave room
+  /// Leave group
   internal static var roomParticipantsLeavePromptTitle: String { 
     return VectorL10n.tr("Vector", "room_participants_leave_prompt_title") 
   }
@@ -2134,11 +2134,11 @@ internal enum VectorL10n {
   internal static var roomPredecessorLink: String { 
     return VectorL10n.tr("Vector", "room_predecessor_link") 
   }
-  /// You have been invited to join this room by %@
+  /// You have been invited to join this group by %@
   internal static func roomPreviewInvitationFormat(_ p1: String) -> String {
     return VectorL10n.tr("Vector", "room_preview_invitation_format", p1)
   }
-  /// This is a preview of this room. Room interactions have been disabled.
+  /// This is a preview of this room. Group interactions have been disabled.
   internal static var roomPreviewSubtitle: String { 
     return VectorL10n.tr("Vector", "room_preview_subtitle") 
   }
@@ -2162,11 +2162,11 @@ internal enum VectorL10n {
   internal static var roomPromptResend: String { 
     return VectorL10n.tr("Vector", "room_prompt_resend") 
   }
-  /// ROOMS
+  /// GROUPS
   internal static var roomRecentsConversationsSection: String { 
     return VectorL10n.tr("Vector", "room_recents_conversations_section") 
   }
-  /// Create room
+  /// Create group
   internal static var roomRecentsCreateEmptyRoom: String { 
     return VectorL10n.tr("Vector", "room_recents_create_empty_room") 
   }
@@ -2186,15 +2186,15 @@ internal enum VectorL10n {
   internal static var roomRecentsInvitesSection: String { 
     return VectorL10n.tr("Vector", "room_recents_invites_section") 
   }
-  /// Join room
+  /// Join group
   internal static var roomRecentsJoinRoom: String { 
     return VectorL10n.tr("Vector", "room_recents_join_room") 
   }
-  /// Type a room id or a room alias
+  /// Type a group id or a group alias
   internal static var roomRecentsJoinRoomPrompt: String { 
     return VectorL10n.tr("Vector", "room_recents_join_room_prompt") 
   }
-  /// Join a room
+  /// Join a group
   internal static var roomRecentsJoinRoomTitle: String { 
     return VectorL10n.tr("Vector", "room_recents_join_room_title") 
   }
@@ -2202,7 +2202,7 @@ internal enum VectorL10n {
   internal static var roomRecentsLowPrioritySection: String { 
     return VectorL10n.tr("Vector", "room_recents_low_priority_section") 
   }
-  /// No rooms
+  /// No groups
   internal static var roomRecentsNoConversation: String { 
     return VectorL10n.tr("Vector", "room_recents_no_conversation") 
   }
@@ -2270,7 +2270,7 @@ internal enum VectorL10n {
   internal static func roomTitleMultipleActiveMembers(_ p1: String, _ p2: String) -> String {
     return VectorL10n.tr("Vector", "room_title_multiple_active_members", p1, p2)
   }
-  /// New room
+  /// New group
   internal static var roomTitleNewRoom: String { 
     return VectorL10n.tr("Vector", "room_title_new_room") 
   }
@@ -2330,7 +2330,7 @@ internal enum VectorL10n {
   internal static var searchPeoplePlaceholder: String { 
     return VectorL10n.tr("Vector", "search_people_placeholder") 
   }
-  /// Rooms
+  /// Groups
   internal static var searchRooms: String { 
     return VectorL10n.tr("Vector", "search_rooms") 
   }
@@ -2782,7 +2782,7 @@ internal enum VectorL10n {
   internal static var shareExtensionAuthPrompt: String { 
     return VectorL10n.tr("Vector", "share_extension_auth_prompt") 
   }
-  /// Failed to send. Check in the main app the encryption settings for this room
+  /// Failed to send. Check in the main app the encryption settings for this group
   internal static var shareExtensionFailedToEncrypt: String { 
     return VectorL10n.tr("Vector", "share_extension_failed_to_encrypt") 
   }

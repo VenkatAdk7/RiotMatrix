@@ -217,13 +217,13 @@
                                                                  attributes:@{NSForegroundColorAttributeName: ThemeService.shared.theme.placeholderTextColor}];
 
                     self.userLoginContainer.hidden = NO;
-                    self.messageLabel.hidden = NO;
-                    self.phoneContainer.hidden = NO;
+                    self.messageLabel.hidden = YES;
+                    self.phoneContainer.hidden = YES;
                     self.passwordContainer.hidden = NO;
 
                     self.messageLabelTopConstraint.constant = 59;
                     self.phoneContainerTopConstraint.constant = 70;
-                    self.passwordContainerTopConstraint.constant = 150;
+                    self.passwordContainerTopConstraint.constant = 50;
 
                     self.currentLastContainer = self.passwordContainer;
                 }
@@ -639,7 +639,7 @@
                              [self hideInputsContainer];
                              
                              self.messageLabel.text = NSLocalizedStringFromTable(@"auth_email_validation_message", @"Vector", nil);
-                             self.messageLabel.hidden = NO;
+                             self.messageLabel.hidden = YES;
                              
                              callback(parameters, nil);
                              
@@ -1171,7 +1171,7 @@
             
             self.emailContainer.hidden = NO;
             
-            self.messageLabel.hidden = NO;
+            self.messageLabel.hidden = YES;
             self.messageLabel.text = NSLocalizedStringFromTable(@"auth_add_email_message", @"Vector", nil);
             
             lastViewContainer = self.emailContainer;
@@ -1194,7 +1194,7 @@
                                                          initWithString:self.phoneTextField.placeholder
                                                          attributes:@{NSForegroundColorAttributeName: ThemeService.shared.theme.placeholderTextColor}];
             
-            self.phoneContainer.hidden = NO;
+            self.phoneContainer.hidden = YES;
             
             if (!_emailContainer.isHidden)
             {
@@ -1215,7 +1215,7 @@
             {
                 self.phoneContainerTopConstraint.constant = 0;
                 
-                self.messageLabel.hidden = NO;
+                self.messageLabel.hidden = YES;
                 self.messageLabel.text = NSLocalizedStringFromTable(@"auth_add_phone_message", @"Vector", nil);
             }
             

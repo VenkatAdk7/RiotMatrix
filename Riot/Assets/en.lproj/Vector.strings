@@ -150,16 +150,16 @@
 "room_recents_directory_section_network" = "Network";
 "room_recents_favourites_section" = "FAVOURITES";
 "room_recents_people_section" = "PEOPLE";
-"room_recents_conversations_section" = "ROOMS";
-"room_recents_no_conversation" = "No rooms";
+"room_recents_conversations_section" = "GROUPS";
+"room_recents_no_conversation" = "No groups";
 "room_recents_low_priority_section" = "LOW PRIORITY";
 "room_recents_server_notice_section" = "SYSTEM ALERTS";
 "room_recents_invites_section" = "INVITES";
 "room_recents_start_chat_with" = "Start chat";
-"room_recents_create_empty_room" = "Create room";
-"room_recents_join_room" = "Join room";
-"room_recents_join_room_title" = "Join a room";
-"room_recents_join_room_prompt" = "Type a room id or a room alias";
+"room_recents_create_empty_room" = "Create group";
+"room_recents_join_room" = "Join group";
+"room_recents_join_room_title" = "Join a group";
+"room_recents_join_room_prompt" = "Type a group id or a group alias";
 
 // People tab
 "people_invites_section" = "INVITES";
@@ -167,14 +167,14 @@
 "people_no_conversation" = "No conversations";
 
 // Rooms tab
-"room_directory_no_public_room" = "No public rooms available";
+"room_directory_no_public_room" = "No public group available";
 
 // Groups tab
 "group_invite_section" = "INVITES";
 "group_section" = "COMMUNITIES";
 
 // Search
-"search_rooms" = "Rooms";
+"search_rooms" = "Groups";
 "search_messages" = "Messages";
 "search_people" = "People";
 "search_files" = "Files";
@@ -185,7 +185,7 @@
 
 // Directory
 "directory_cell_title" = "Browse directory";
-"directory_cell_description" = "%tu rooms";
+"directory_cell_description" = "%tu groups";
 "directory_search_results_title" = "Browse directory results";
 "directory_search_results" = "%tu results found for %@";
 "directory_search_results_more_than" = ">%tu results found for %@";
@@ -206,8 +206,8 @@
 "room_participants_add_participant" = "Add participant";
 "room_participants_one_participant" = "1 participant";
 "room_participants_multi_participants" = "%d participants";
-"room_participants_leave_prompt_title" = "Leave room";
-"room_participants_leave_prompt_msg" = "Are you sure you want to leave the room?";
+"room_participants_leave_prompt_title" = "Leave group";
+"room_participants_leave_prompt_msg" = "Are you sure you want to leave the group?";
 "room_participants_remove_prompt_title" = "Confirmation";
 "room_participants_remove_prompt_msg" = "Are you sure you want to remove %@ from this chat?";
 "room_participants_remove_third_party_invite_msg" = "Remove third-party invite is not supported yet until the api exists";
@@ -232,9 +232,9 @@
 "room_participants_action_section_other" = "Other";
 
 "room_participants_action_invite" = "Invite";
-"room_participants_action_leave" = "Leave this room";
-"room_participants_action_remove" = "Remove from this room";
-"room_participants_action_ban" = "Ban from this room";
+"room_participants_action_leave" = "Leave this group";
+"room_participants_action_remove" = "Remove from this group";
+"room_participants_action_ban" = "Ban from this group";
 "room_participants_action_unban" = "Unban";
 "room_participants_action_ignore" = "Hide all messages from this user";
 "room_participants_action_unignore" = "Show all messages from this user";
@@ -326,7 +326,7 @@
 "unknown_devices_title" = "Unknown devices";
 
 // Room Title
-"room_title_new_room" = "New room";
+"room_title_new_room" = "New group";
 "room_title_multiple_active_members" = "%@/%@ active members";
 "room_title_one_active_member" = "%@/%@ active member";
 "room_title_invite_members" = "Invite members";
@@ -334,8 +334,8 @@
 "room_title_one_member" = "1 member";
 
 // Room Preview
-"room_preview_invitation_format" = "You have been invited to join this room by %@";
-"room_preview_subtitle" = "This is a preview of this room. Room interactions have been disabled.";
+"room_preview_invitation_format" = "You have been invited to join this group by %@";
+"room_preview_subtitle" = "This is a preview of this room. Group interactions have been disabled.";
 "room_preview_unlinked_email_warning" = "This invitation was sent to %@, which is not associated with this account. You may wish to login with a different account, or add this email to your account.";
 "room_preview_try_join_an_unknown_room" = "You are trying to access %@. Would you like to join in order to participate in the discussion?";
 "room_preview_try_join_an_unknown_room_default" = "a room";
@@ -477,12 +477,12 @@
 "settings_key_backup_delete_confirmation_prompt_msg" = "Are you sure? You will lose your encrypted messages if your keys are not backed up properly.";
 
 // Room Details
-"room_details_title" = "Room Details";
+"room_details_title" = "Group Details";
 "room_details_people" = "Members";
 "room_details_files" = "Files";
 "room_details_settings" = "Settings";
-"room_details_photo" = "Room Photo";
-"room_details_room_name" = "Room Name";
+"room_details_photo" = "Group Photo";
+"room_details_room_name" = "Group Name";
 "room_details_topic" = "Topic";
 "room_details_favourite_tag" = "Favourite";
 "room_details_low_priority_tag" = "Low priority";
@@ -490,10 +490,10 @@
 "room_details_direct_chat" = "Direct Chat";
 "room_details_access_section"="Who can access this room?";
 "room_details_access_section_invited_only"="Only people who have been invited";
-"room_details_access_section_anyone_apart_from_guest"="Anyone who knows the room's link, apart from guests";
-"room_details_access_section_anyone"="Anyone who knows the room's link, including guests";
+"room_details_access_section_anyone_apart_from_guest"="Anyone who knows the group's link, apart from guests";
+"room_details_access_section_anyone"="Anyone who knows the group's link, including guests";
 "room_details_access_section_no_address_warning" = "To link to a room it must have an address";
-"room_details_access_section_directory_toggle"="List this room in room directory";
+"room_details_access_section_directory_toggle"="List this group in room directory";
 "room_details_history_section"="Who can read history?";
 "room_details_history_section_anyone"="Anyone";
 "room_details_history_section_members_only"="Members only (since the point in time of selecting this option)";
@@ -502,7 +502,7 @@
 "room_details_history_section_prompt_title" = "Privacy warning";
 "room_details_history_section_prompt_msg" = "Changes to who can read history will only apply to future messages in this room. The visibility of existing history will be unchanged.";
 "room_details_addresses_section"="Addresses";
-"room_details_no_local_addresses" = "This room has no local addresses";
+"room_details_no_local_addresses" = "This group has no local addresses";
 "room_details_new_address" = "Add new address";
 "room_details_new_address_placeholder" = "Add new address (e.g. #foo%@)";
 "room_details_addresses_invalid_address_prompt_title" = "Invalid alias format";
@@ -523,16 +523,16 @@
 "room_details_fail_to_update_avatar" = "Fail to update the room photo";
 "room_details_fail_to_update_room_name" = "Fail to update the room name";
 "room_details_fail_to_update_topic" = "Fail to update the topic";
-"room_details_fail_to_update_room_guest_access" = "Fail to update the room guest access";
+"room_details_fail_to_update_room_guest_access" = "Fail to update the group guest access";
 "room_details_fail_to_update_room_join_rule" = "Fail to update the join rule";
 "room_details_fail_to_update_room_directory_visibility" = "Fail to update the room directory visibility";
 "room_details_fail_to_update_history_visibility" = "Fail to update the history visibility";
-"room_details_fail_to_add_room_aliases" = "Fail to add the new room addresses";
-"room_details_fail_to_remove_room_aliases" = "Fail to remove the room addresses";
+"room_details_fail_to_add_room_aliases" = "Fail to add the new group addresses";
+"room_details_fail_to_remove_room_aliases" = "Fail to remove the group addresses";
 "room_details_fail_to_update_room_canonical_alias" = "Fail to update the main address";
 "room_details_fail_to_update_room_communities" = "Fail to update the related communities";
-"room_details_fail_to_update_room_direct" = "Fail to update the direct flag of this room";
-"room_details_fail_to_enable_encryption" = "Fail to enable encryption in this room";
+"room_details_fail_to_update_room_direct" = "Fail to update the direct flag of this group";
+"room_details_fail_to_enable_encryption" = "Fail to enable encryption in this group";
 "room_details_save_changes_prompt" = "Do you want to save changes?";
 "room_details_set_main_address" = "Set as Main Address";
 "room_details_unset_main_address" = "Unset as Main Address";
@@ -544,13 +544,13 @@
 "group_details_title" = "Community Details";
 "group_details_home" = "Home";
 "group_details_people" = "People";
-"group_details_rooms" = "Rooms";
+"group_details_rooms" = "Groups";
 
 // Group Home
 "group_home_one_member_format" = "1 member";
 "group_home_multi_members_format" = "%tu members";
 "group_home_one_room_format" = "1 room";
-"group_home_multi_rooms_format" = "%tu rooms";
+"group_home_multi_rooms_format" = "%tu groups";
 "group_invitation_format" = "%@ has invited you to join this community";
 
 // Group participants
@@ -568,7 +568,7 @@
 "group_participants_invited_section" = "INVITED";
 
 // Group rooms
-"group_rooms_filter_rooms" = "Filter community rooms";
+"group_rooms_filter_rooms" = "Filter community groups";
 
 // Read Receipts
 "read_receipts_list" = "Read Receipts List";
@@ -587,8 +587,8 @@
 "directory_title" = "Directory";
 "directory_server_picker_title" = "Select a directory";
 "directory_server_all_rooms" = "All rooms on %@ server";
-"directory_server_all_native_rooms" = "All native Matrix rooms";
-"directory_server_type_homeserver" = "Type a homeserver to list public rooms from";
+"directory_server_all_native_rooms" = "All native Matrix groups";
+"directory_server_type_homeserver" = "Type a homeserver to list public groups from";
 "directory_server_placeholder" = "matrix.org";
 
 // Events formatter
@@ -608,7 +608,7 @@
 "yesterday" = "Yesterday";
 "network_offline_prompt" = "The Internet connection appears to be offline.";
 "homeserver_connection_lost" = "Could not connect to the homeserver.";
-"public_room_section_title" = "Public Rooms (at %@):";
+"public_room_section_title" = "Public Groups (at %@):";
 "bug_report_prompt" = "The application has crashed last time. Would you like to submit a crash report?";
 "rage_shake_prompt" = "You seem to be shaking the phone in frustration. Would you like to submit a bug report?";
 "do_not_ask_again" = "Do not ask again";
@@ -677,7 +677,7 @@
 
 // Share extension
 "share_extension_auth_prompt" = "Login in the main app to share content";
-"share_extension_failed_to_encrypt" = "Failed to send. Check in the main app the encryption settings for this room";
+"share_extension_failed_to_encrypt" = "Failed to send. Check in the main app the encryption settings for this group";
 
 // Room key request dialog
 "e2e_room_key_request_title" = "Encryption key request";

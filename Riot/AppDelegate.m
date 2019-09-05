@@ -3250,6 +3250,7 @@ NSString *const kAppDelegateNetworkStatusDidChangeNotification = @"kAppDelegateN
                 animationView.center = CGPointMake(launchAnimationContainerView.center.x, 3 * launchAnimationContainerView.center.y / 4);
                 
                 animationView.translatesAutoresizingMaskIntoConstraints = NO;
+                animationView.hidden = YES;
                 [launchAnimationContainerView addSubview:animationView];
                 
                 NSLayoutConstraint* widthConstraint = [NSLayoutConstraint constraintWithItem:animationView

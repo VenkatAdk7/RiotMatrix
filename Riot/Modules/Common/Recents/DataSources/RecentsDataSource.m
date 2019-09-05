@@ -770,19 +770,21 @@ NSString *const kRecentsDataSourceTapOnDirectoryServerChange = @"kRecentsDataSou
             directoryServerLabel.translatesAutoresizingMaskIntoConstraints = NO;
             directoryServerLabel.font = [UIFont systemFontOfSize:16.0];
             directoryServerLabel.textAlignment = NSTextAlignmentRight;
+            directoryServerLabel.hidden = YES;
             [directorySectionContainer addSubview:directoryServerLabel];
 
             // Chevron
             UIImageView *chevronImageView = [[UIImageView alloc] initWithFrame:CGRectMake(containerWidth - 26, 5, 6, 12)];
             chevronImageView.image = [UIImage imageNamed:@"disclosure_icon"];
             chevronImageView.translatesAutoresizingMaskIntoConstraints = NO;
+            chevronImageView.hidden = YES;
             [directorySectionContainer addSubview:chevronImageView];
 
             // Set a tap listener on all the container
             UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onDirectoryServerPickerTap:)];
             [tapGesture setNumberOfTouchesRequired:1];
             [tapGesture setNumberOfTapsRequired:1];
-            [directorySectionContainer addGestureRecognizer:tapGesture];
+            //[directorySectionContainer addGestureRecognizer:tapGesture];
 
             // Add networkLabel constraints
             centerYConstraint = [NSLayoutConstraint constraintWithItem:networkLabel

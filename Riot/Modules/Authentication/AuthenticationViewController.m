@@ -90,7 +90,7 @@
     
     self.defaultIdentityServerUrl = [[NSUserDefaults standardUserDefaults] objectForKey:@"identityserverurl"];
     
-    self.welcomeImageView.image = [UIImage imageNamed:@"logo"];
+    self.welcomeImageView.image = [UIImage imageNamed:@"chat_logo"];
     
     [self.submitButton.layer setCornerRadius:5];
     self.submitButton.clipsToBounds = YES;
@@ -120,8 +120,13 @@
     // The view controller dismiss itself on successful login.
     self.delegate = self;
     
-    self.homeServerTextField.placeholder = NSLocalizedStringFromTable(@"auth_home_server_placeholder", @"Vector", nil);
-    self.identityServerTextField.placeholder = NSLocalizedStringFromTable(@"auth_identity_server_placeholder", @"Vector", nil);
+    
+    //self.homeServerTextField.placeholder = NSLocalizedStringFromTable(@"auth_home_server_placeholder", @"Vector", nil);
+    
+    //self.identityServerTextField.placeholder = NSLocalizedStringFromTable(@"auth_identity_server_placeholder", @"Vector", nil);
+    
+    //self.homeServerTextField.text = @"http://superman1.eastus.cloudapp.azure.com:8008";
+    //self.identityServerTextField.text = @"http://superman1.eastus.cloudapp.azure.com:8008";
     
     // Custom used authInputsView
     [self registerAuthInputsViewClass:AuthInputsView.class forAuthType:MXKAuthenticationTypeLogin];

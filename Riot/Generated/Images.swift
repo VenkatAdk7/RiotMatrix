@@ -116,6 +116,8 @@ internal enum Asset {
     internal static let animatedLogo3 = ImageAsset(name: "animatedLogo-3")
     internal static let animatedLogo4 = ImageAsset(name: "animatedLogo-4")
     internal static let cancel = ImageAsset(name: "cancel")
+    internal static let chatLogo = ImageAsset(name: "chat_logo")
+    internal static let logo = ImageAsset(name: "logo")
     internal static let e2eVerified = ImageAsset(name: "e2e_verified")
   }
 }

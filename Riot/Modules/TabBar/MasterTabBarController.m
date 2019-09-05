@@ -82,6 +82,12 @@
     _roomsViewController = self.viewControllers[TABBAR_ROOMS_INDEX];
     _groupsViewController = self.viewControllers[TABBAR_GROUPS_INDEX];
     
+    if (self.viewControllers.count > 0  && self.viewControllers.count == 5) {
+        NSMutableArray *newTabs = [NSMutableArray arrayWithArray:self.viewControllers];
+        [newTabs removeObjectAtIndex: 4];
+        [self setViewControllers:newTabs];
+    }
+    
     // Set the accessibility labels for all buttons #1842
     [_settingsBarButtonItem setAccessibilityLabel:NSLocalizedStringFromTable(@"settings_title", @"Vector", nil)];
     [_searchBarButtonIem setAccessibilityLabel:NSLocalizedStringFromTable(@"search_default_placeholder", @"Vector", nil)];
@@ -964,7 +970,7 @@
                                                    }]];
     
     [currentAlert mxk_setAccessibilityIdentifier: @"HomeVCUseAnalyticsAlert"];
-    [self presentViewController:currentAlert animated:YES completion:nil];
+    //[self presentViewController:currentAlert animated:YES completion:nil];
 }
 
 #pragma mark - UITabBarDelegate
