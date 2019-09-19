@@ -371,7 +371,7 @@ NSString *const kRecentsDataSourceTapOnDirectoryServerChange = @"kRecentsDataSou
         
         if (favoriteCellDataArray.count > 0)
         {
-            favoritesSection = sectionsCount++;
+            //favoritesSection = sectionsCount++;
         }
         
         if (_recentsDataSourceMode == RecentsDataSourceModeHome)
@@ -388,7 +388,7 @@ NSString *const kRecentsDataSourceTapOnDirectoryServerChange = @"kRecentsDataSou
         if (_recentsDataSourceMode == RecentsDataSourceModeRooms)
         {
             // Add the directory section after "ROOMS"
-            directorySection = sectionsCount++;
+            //directorySection = sectionsCount++;
         }
         
         if (lowPriorityCellDataArray.count > 0)
@@ -420,10 +420,10 @@ NSString *const kRecentsDataSourceTapOnDirectoryServerChange = @"kRecentsDataSou
     {
         count = 1;
     }
-    else if (section == favoritesSection && !(shrinkedSectionsBitMask & RECENTSDATASOURCE_SECTION_FAVORITES))
-    {
-        count = favoriteCellDataArray.count;
-    }
+//    else if (section == favoritesSection && !(shrinkedSectionsBitMask & RECENTSDATASOURCE_SECTION_FAVORITES))
+//    {
+//        count = favoriteCellDataArray.count;
+//    }
     else if (section == peopleSection && !(shrinkedSectionsBitMask & RECENTSDATASOURCE_SECTION_PEOPLE))
     {
         count = peopleCellDataArray.count ? peopleCellDataArray.count : 1;
@@ -483,12 +483,12 @@ NSString *const kRecentsDataSourceTapOnDirectoryServerChange = @"kRecentsDataSou
     NSString *title;
     NSUInteger count = 0;
     
-    if (section == favoritesSection)
-    {
-        count = favoriteCellDataArray.count;
-        title = NSLocalizedStringFromTable(@"room_recents_favourites_section", @"Vector", nil);
-    }
-    else if (section == peopleSection)
+//    if (section == favoritesSection)
+//    {
+//        count = favoriteCellDataArray.count;
+//        title = NSLocalizedStringFromTable(@"room_recents_favourites_section", @"Vector", nil);
+//    }
+    if (section == peopleSection)
     {
         count = peopleCellDataArray.count;
         title = NSLocalizedStringFromTable(@"room_recents_people_section", @"Vector", nil);
@@ -564,11 +564,11 @@ NSString *const kRecentsDataSourceTapOnDirectoryServerChange = @"kRecentsDataSou
     NSArray *sectionArray;
     UIView *missedNotifAndUnreadBadgeBgView = nil;
     
-    if (section == favoritesSection)
-    {
-        sectionArray = favoriteCellDataArray;
-    }
-    else if (section == peopleSection)
+//    if (section == favoritesSection)
+//    {
+//        sectionArray = favoriteCellDataArray;
+//    }
+    if (section == peopleSection)
     {
         sectionArray = peopleCellDataArray;
     }
@@ -655,11 +655,11 @@ NSString *const kRecentsDataSourceTapOnDirectoryServerChange = @"kRecentsDataSou
     
     if (_areSectionsShrinkable)
     {
-        if (section == favoritesSection)
-        {
-            sectionBitwise =  RECENTSDATASOURCE_SECTION_FAVORITES;
-        }
-        else if (section == peopleSection)
+//        if (section == favoritesSection)
+//        {
+//            sectionBitwise =  RECENTSDATASOURCE_SECTION_FAVORITES;
+//        }
+         if (section == peopleSection)
         {
             sectionBitwise =  RECENTSDATASOURCE_SECTION_PEOPLE;
         }
@@ -1028,13 +1028,13 @@ NSString *const kRecentsDataSourceTapOnDirectoryServerChange = @"kRecentsDataSou
         cellDataIndex ++;
     }
     
-    if (tableSection == favoritesSection)
-    {
-        if (cellDataIndex < favoriteCellDataArray.count)
-        {
-            cellData = favoriteCellDataArray[cellDataIndex];
-        }
-    }
+//    if (tableSection == favoritesSection)
+//    {
+//        if (cellDataIndex < favoriteCellDataArray.count)
+//        {
+//            cellData = favoriteCellDataArray[cellDataIndex];
+//        }
+//    }
     else if (tableSection == peopleSection)
     {
         if (cellDataIndex < peopleCellDataArray.count)
@@ -1155,21 +1155,21 @@ NSString *const kRecentsDataSourceTapOnDirectoryServerChange = @"kRecentsDataSou
             indexPath = [NSIndexPath indexPathForRow:index inSection:invitesSection];
         }
     }
-    
-    if (!indexPath && (favoritesSection >= 0))
-    {
-        index = [self cellIndexPosWithRoomId:roomId andMatrixSession:matrixSession within:favoriteCellDataArray];
-        
-        if (index != NSNotFound)
-        {
-            // Check whether the favorites are shrinked
-            if (shrinkedSectionsBitMask & RECENTSDATASOURCE_SECTION_FAVORITES)
-            {
-                return nil;
-            }
-            indexPath = [NSIndexPath indexPathForRow:index inSection:favoritesSection];
-        }
-    }
+//
+//    if (!indexPath && (favoritesSection >= 0))
+//    {
+//        index = [self cellIndexPosWithRoomId:roomId andMatrixSession:matrixSession within:favoriteCellDataArray];
+//
+//        if (index != NSNotFound)
+//        {
+//            // Check whether the favorites are shrinked
+//            if (shrinkedSectionsBitMask & RECENTSDATASOURCE_SECTION_FAVORITES)
+//            {
+//                return nil;
+//            }
+//            indexPath = [NSIndexPath indexPathForRow:index inSection:favoritesSection];
+//        }
+//    }
     
     if (!indexPath && (peopleSection >= 0))
     {
@@ -1642,11 +1642,11 @@ NSString *const kRecentsDataSourceTapOnDirectoryServerChange = @"kRecentsDataSou
 
 - (NSString*)roomTagAt:(NSIndexPath*)path
 {
-    if (path.section == favoritesSection)
-    {
-        return kMXRoomTagFavourite;
-    }
-    else if (path.section == lowPrioritySection)
+//    if (path.section == favoritesSection)
+//    {
+//        return kMXRoomTagFavourite;
+//    }
+     if (path.section == lowPrioritySection)
     {
         return kMXRoomTagLowPriority;
     }

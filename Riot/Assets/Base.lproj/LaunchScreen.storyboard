@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="IcW-17-3Qq">
+                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchscreen1" translatesAutoresizingMaskIntoConstraints="NO" id="IcW-17-3Qq">
                                 <rect key="frame" x="0.0" y="5" width="414" height="731"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="731" id="Lbo-ar-PiJ"/>
@@ -42,6 +42,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="341.33334350585938" height="341.33334350585938"/>
+        <image name="launchscreen1" width="640" height="1136"/>
     </resources>
 </document>

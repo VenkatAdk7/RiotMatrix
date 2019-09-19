@@ -82,9 +82,19 @@
     _roomsViewController = self.viewControllers[TABBAR_ROOMS_INDEX];
     _groupsViewController = self.viewControllers[TABBAR_GROUPS_INDEX];
     
+//    _peopleViewController = self.viewControllers[TABBAR_PEOPLE_INDEX];
+//    _roomsViewController = self.viewControllers[TABBAR_ROOMS_INDEX];
+//    _homeViewController = self.viewControllers[TABBAR_HOME_INDEX];
+//    //_favouritesViewController = self.viewControllers[TABBAR_FAVOURITES_INDEX];
+//    //_groupsViewController = self.viewControllers[TABBAR_GROUPS_INDEX];
+
+    
     if (self.viewControllers.count > 0  && self.viewControllers.count == 5) {
         NSMutableArray *newTabs = [NSMutableArray arrayWithArray:self.viewControllers];
         [newTabs removeObjectAtIndex: 4];
+        [newTabs removeObjectAtIndex: 1];
+        [newTabs insertObject:self.viewControllers[0] atIndex:3];
+        [newTabs removeObjectAtIndex: 0];
         [self setViewControllers:newTabs];
     }
     
@@ -855,16 +865,16 @@
 - (void)refreshTabBarBadges
 {
     // Use a middle dot to signal missed notif in favourites
-    [self setMissedDiscussionsMark:(recentsDataSource.missedFavouriteDiscussionsCount? @"\u00B7": nil)
-                      onTabBarItem:TABBAR_FAVOURITES_INDEX
-                    withBadgeColor:(recentsDataSource.missedHighlightFavouriteDiscussionsCount ? ThemeService.shared.theme.noticeColor : ThemeService.shared.theme.noticeSecondaryColor)];
+//    [self setMissedDiscussionsMark:(recentsDataSource.missedFavouriteDiscussionsCount? @"\u00B7": nil)
+//                      onTabBarItem:TABBAR_FAVOURITES_INDEX
+//                    withBadgeColor:(recentsDataSource.missedHighlightFavouriteDiscussionsCount ? ThemeService.shared.theme.noticeColor : ThemeService.shared.theme.noticeSecondaryColor)];
     
     // Update the badge on People and Rooms tabs
     [self setMissedDiscussionsCount:recentsDataSource.missedDirectDiscussionsCount
-                       onTabBarItem:TABBAR_PEOPLE_INDEX
+                       onTabBarItem:0
                      withBadgeColor:(recentsDataSource.missedHighlightDirectDiscussionsCount ? ThemeService.shared.theme.noticeColor : ThemeService.shared.theme.noticeSecondaryColor)];
     [self setMissedDiscussionsCount:recentsDataSource.missedGroupDiscussionsCount
-                       onTabBarItem:TABBAR_ROOMS_INDEX
+                       onTabBarItem:1
                      withBadgeColor:(recentsDataSource.missedHighlightGroupDiscussionsCount ? ThemeService.shared.theme.noticeColor : ThemeService.shared.theme.noticeSecondaryColor)];
 }
 

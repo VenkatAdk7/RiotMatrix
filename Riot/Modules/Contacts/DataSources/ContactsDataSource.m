@@ -88,11 +88,11 @@
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onContactManagerDidUpdate:) name:kMXKContactManagerDidUpdateLocalContactMatrixIDsNotification object:nil];
         
         // Refresh the matrix identifiers for all the local contacts.
-        if ([CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts] != CNAuthorizationStatusNotDetermined)
-        {
-            // Refresh the matrix identifiers for all the local contacts.
-            [[MXKContactManager sharedManager] updateMatrixIDsForAllLocalContacts];
-        }
+//        if ([CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts] != CNAuthorizationStatusNotDetermined)
+//        {
+//            // Refresh the matrix identifiers for all the local contacts.
+//            [[MXKContactManager sharedManager] updateMatrixIDsForAllLocalContacts];
+//        }
     }
     return self;
 }
@@ -472,7 +472,7 @@
         }
         
         // Keep visible the header for the both contact sections, even if their are empty.
-        filteredLocalContactsSection = count++;
+        //filteredLocalContactsSection = count++;
         filteredMatrixContactsSection = count++;
     }
     else
@@ -484,7 +484,7 @@
         }
         
         // Keep visible the local contact header, even if the section is empty.
-        filteredLocalContactsSection = count++;
+        //filteredLocalContactsSection = count++;
     }
     
     
@@ -619,27 +619,27 @@
             tableViewCell.textLabel.numberOfLines = 0;
 
             // Indicate to the user why there is no contacts
-            switch ([CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts])
-            {
-                case CNAuthorizationStatusAuthorized:
-                    // Because there is no contacts on the device
-                    tableViewCell.textLabel.text = NSLocalizedStringFromTable(@"contacts_address_book_no_contact", @"Vector", nil);
-                    break;
-
-                case CNAuthorizationStatusNotDetermined:
-                    // Because the user have not granted the permission yet
-                    // (The permission request popup is displayed at the same time)
-                    tableViewCell.textLabel.text = NSLocalizedStringFromTable(@"contacts_address_book_permission_required", @"Vector", nil);
-                    break;
-
-                default:
-                {
-                    // Because the user didn't allow the app to access local contacts
-                    tableViewCell.textLabel.text = NSLocalizedStringFromTable(@"contacts_address_book_permission_denied", @"Vector", nil);
-                    tableViewCell.textLabel.text = @"";
-                    break;
-                }
-            }
+//            switch ([CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts])
+//            {
+//                case CNAuthorizationStatusAuthorized:
+//                    // Because there is no contacts on the device
+//                    tableViewCell.textLabel.text = NSLocalizedStringFromTable(@"contacts_address_book_no_contact", @"Vector", nil);
+//                    break;
+//
+//                case CNAuthorizationStatusNotDetermined:
+//                    // Because the user have not granted the permission yet
+//                    // (The permission request popup is displayed at the same time)
+//                    tableViewCell.textLabel.text = NSLocalizedStringFromTable(@"contacts_address_book_permission_required", @"Vector", nil);
+//                    break;
+//
+//                default:
+//                {
+//                    // Because the user didn't allow the app to access local contacts
+//                    tableViewCell.textLabel.text = NSLocalizedStringFromTable(@"contacts_address_book_permission_denied", @"Vector", nil);
+//                    tableViewCell.textLabel.text = @"";
+//                    break;
+//                }
+//            }
         }
         return tableViewCell;
     }

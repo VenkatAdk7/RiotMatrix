@@ -108,15 +108,15 @@ internal enum Asset {
     internal static let tabPeopleSelected = ImageAsset(name: "tab_people_selected")
     internal static let tabRooms = ImageAsset(name: "tab_rooms")
     internal static let tabRoomsSelected = ImageAsset(name: "tab_rooms_selected")
+    internal static let batlogo = ImageAsset(name: "batlogo")
+    internal static let launchscreen = ImageAsset(name: "launchscreen")
+    internal static let launchscreen1 = ImageAsset(name: "launchscreen1")
   }
   internal enum SharedImages {
     internal static let animatedLogo0 = ImageAsset(name: "animatedLogo-0")
     internal static let animatedLogo1 = ImageAsset(name: "animatedLogo-1")
     internal static let animatedLogo2 = ImageAsset(name: "animatedLogo-2")
-    internal static let animatedLogo3 = ImageAsset(name: "animatedLogo-3")
-    internal static let animatedLogo4 = ImageAsset(name: "animatedLogo-4")
     internal static let cancel = ImageAsset(name: "cancel")
-    internal static let chatLogo = ImageAsset(name: "chat_logo")
     internal static let logo = ImageAsset(name: "logo")
     internal static let e2eVerified = ImageAsset(name: "e2e_verified")
   }

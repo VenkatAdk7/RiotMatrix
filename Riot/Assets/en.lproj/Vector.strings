@@ -23,7 +23,7 @@
 "title_home" = "Home";
 "title_favourites" = "Favourites";
 "title_people" = "People";
-"title_rooms" = "Rooms";
+"title_rooms" = "Groups";
 "title_groups" = "Communities";
 "warning" = "Warning";
 
@@ -47,6 +47,8 @@
 "accept" = "Accept";
 "preview" = "Preview";
 "camera" = "Camera";
+
+
 "voice" = "Voice";
 "video" = "Video";
 "active_call" = "Active Call";
@@ -163,7 +165,8 @@
 
 // People tab
 "people_invites_section" = "INVITES";
-"people_conversation_section" = "CONVERSATIONS";
+//"people_conversation_section" = "CONVERSATIONS";
+"people_conversation_section" = "CHATS";
 "people_no_conversation" = "No conversations";
 
 // Rooms tab
