@@ -165,6 +165,8 @@
 {
     // Update search results.
     searchText = [searchText stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    NSLog(@"*** SerachText ***** %@",searchText);
+    
     NSMutableArray<MXKContact*> *unfilteredLocalContacts;
     NSMutableArray<MXKContact*> *unfilteredMatrixContacts;
     
@@ -201,23 +203,26 @@
                 [hsUserDirectoryOperation cancel];
                 hsUserDirectoryOperation = nil;
             }
-
+            
             hsUserDirectoryOperation = [self.mxSession.matrixRestClient searchUsers:searchText limit:50 success:^(MXUserSearchResponse *userSearchResponse) {
 
-                filteredMatrixContacts = [NSMutableArray arrayWithCapacity:userSearchResponse.results.count];
+                self->filteredMatrixContacts = [NSMutableArray arrayWithCapacity:userSearchResponse.results.count];
 
+                NSLog(@"*** UserSearchResponse ***** %@",userSearchResponse.results);
+                NSLog(@"*** FilteredMatrixContacts ***** %lu",(unsigned long)self->filteredMatrixContacts.count);
+                
                 // Keep the response order as the hs ordered users by relevance
                 for (MXUser *mxUser in userSearchResponse.results)
                 {
                     MXKContact *contact = [[MXKContact alloc] initMatrixContactWithDisplayName:mxUser.displayname andMatrixID:mxUser.userId];
-                    [filteredMatrixContacts addObject:contact];
+                    [self->filteredMatrixContacts addObject:contact];
                 }
+                
+                self->hsUserDirectoryOperation = nil;
 
-                hsUserDirectoryOperation = nil;
+                self->_userDirectoryState = userSearchResponse.limited ? ContactsDataSourceUserDirectoryStateLoadedButLimited : ContactsDataSourceUserDirectoryStateLoaded;
 
-                _userDirectoryState = userSearchResponse.limited ? ContactsDataSourceUserDirectoryStateLoadedButLimited : ContactsDataSourceUserDirectoryStateLoaded;
-
-                // And inform the delegate about the update
+                // And inform the delegate about the update_
                 [self.delegate dataSource:self didCellChange:nil];
 
             } failure:^(NSError *error) {
